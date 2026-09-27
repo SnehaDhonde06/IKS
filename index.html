@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sanchay | Digital Archive of Indian Food Preservation</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="hero">
+  <nav class="navbar">
+    <div class="logo">🍚 Sanchay</div>
+    <div class="nav-links">
+      <a href="#home" class="active">Home</a>
+      <a href="#archive">Archive</a>
+      <a href="#chatbot">Ask Sanchay</a>
+      <a href="#about">About</a>
+      <a href="#team">Team</a>
+    </div>
+  </nav>
+  <div class="hero-content">
+    <span class="badge">Indian Knowledge Systems · Group 6</span>
+    <h1>Preserving Wisdom, One Technique at a Time</h1>
+    <p>A digital archive documenting traditional Indian food-preservation techniques — drying, fermentation, pickling and sun-drying — passed down through generations.</p>
+    <a href="#archive" class="btn-primary">Explore the Archive →</a>
+  </div>
+</header>
+
+<section class="stats">
+  <div class="stat-card"><h3>4</h3><p>Techniques Covered</p></div>
+  <div class="stat-card"><h3 id="totalCount">8</h3><p>Documented Practices</p></div>
+  <div class="stat-card"><h3>100%</h3><p>Traditional Knowledge</p></div>
+  <div class="stat-card"><h3>∞</h3><p>Stories to Discover</p></div>
+</section>
+
+<section id="archive" class="archive-section">
+  <div class="section-header">
+    <span class="eyebrow">The Archive</span>
+    <h2>Browse Preservation Techniques</h2>
+  </div>
+
+  <div class="controls">
+    <input type="text" id="searchInput" placeholder="Search by name, region or ingredient...">
+    <div class="filter-chips" id="filterChips">
+      <button class="chip active" data-category="All">All</button>
+      <button class="chip" data-category="Drying">☀️ Drying</button>
+      <button class="chip" data-category="Fermentation">🫧 Fermentation</button>
+      <button class="chip" data-category="Pickling">🫙 Pickling</button>
+      <button class="chip" data-category="Sun-Drying">🌞 Sun-Drying</button>
+    </div>
+  </div>
+
+  <div class="card-grid" id="cardGrid"></div>
+</section>
+
+<section id="chatbot" class="chatbot-section">
+  <div class="section-header">
+    <span class="eyebrow">AI Assistant</span>
+    <h2>Ask Sanchay</h2>
+    <p>Curious about a technique? Ask anything about traditional Indian food preservation.</p>
+  </div>
+
+  <div class="chat-box">
+    <div class="chat-header">
+      <span class="dot"></span> Sanchay Assistant — powered by Groq
+    </div>
+    <div class="chat-messages" id="chatMessages">
+      <div class="message bot">Namaste! 🙏 I'm Sanchay, your food-preservation guide. Ask me about drying, fermentation, pickling or sun-drying — or anything in the archive.</div>
+    </div>
+    <div class="chat-suggestions" id="chatSuggestions">
+      <button class="suggestion">Why does fermentation preserve food?</button>
+      <button class="suggestion">How long does mango pickle last?</button>
+      <button class="suggestion">What's the science behind sun-drying?</button>
+    </div>
+    <div class="chat-input-row">
+      <input type="text" id="chatInput" placeholder="Ask about a preservation technique...">
+      <button id="sendBtn" class="btn-primary">Send</button>
+    </div>
+  </div>
+</section>
+
+<section id="about" class="about-section">
+  <div class="section-header">
+    <span class="eyebrow">Project Documentation</span>
+    <h2>About This Project</h2>
+  </div>
+  <div class="about-grid">
+    <div class="about-card">
+      <h4>Problem Statement</h4>
+      <p>Traditional Indian food-preservation knowledge is passed down orally and is at risk of being lost. This project documents it digitally.</p>
+    </div>
+    <div class="about-card">
+      <h4>Objective</h4>
+      <p>To create an accessible, well-organized digital archive of drying, fermentation, pickling and sun-drying techniques across Indian regions.</p>
+    </div>
+    <div class="about-card">
+      <h4>Technologies Used</h4>
+      <p>HTML5, CSS3, Vanilla JavaScript, and the Groq API for the AI assistant.</p>
+    </div>
+  </div>
+</section>
+
+<section id="team" class="about-section">
+  <div class="section-header">
+    <span class="eyebrow">IKS Assignment · Group 6</span>
+    <h2>Meet the Team</h2>
+  </div>
+  <div class="about-grid">
+    <div class="about-card">
+      <h4>1. Ananya Jena</h4>
+      <p>👑 Team Leader</p>
+    </div>
+    <div class="about-card"><h4>2. Charuta Khanzode</h4></div>
+    <div class="about-card"><h4>3. Janvi Kadam</h4></div>
+    <div class="about-card"><h4>4. Smita Dond</h4></div>
+    <div class="about-card"><h4>5. Sanchi Kondekar</h4></div>
+    <div class="about-card"><h4>6. Samruddhi Awari</h4></div>
+    <div class="about-card"><h4>7. Niranjana Khairnar</h4></div>
+    <div class="about-card"><h4>8. Sneha Dhonde</h4></div>
+    <div class="about-card"><h4>9. Anushka Chavan</h4></div>
+    <div class="about-card"><h4>10. Shreya Gharat</h4></div>
+  </div>
+</section>
+
+<div class="modal-overlay" id="modalOverlay">
+  <div class="modal" id="modalContent"></div>
+</div>
+
+<footer>
+  <p>Sanchay — Digital Archive of Indian Food Preservation Techniques</p>
+  <p class="footer-sub">IKS Project · Group 6</p>
+</footer>
+
+<script src="data.js"></script>
+<script src="app.js"></script>
+<script src="chatbot.template.js"></script>
+</body>
+</html>
